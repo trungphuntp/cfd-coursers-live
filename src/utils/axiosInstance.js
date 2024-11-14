@@ -1,5 +1,5 @@
-import { BASE_URL } from "./constant/enviroments";
 import axios from "axios";
+import { BASE_URL } from "@/constant/enviroments";
 import methodToken from "./token";
 
 const axiosInstance = axios.create({

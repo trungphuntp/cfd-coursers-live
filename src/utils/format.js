@@ -1,4 +1,4 @@
-import { FORMAT } from "./constant/format";
+import { FORMAT } from "@/constant/format";
 import moment from "moment";
 
 export const formatDate = (date, format = FORMAT.date) => {

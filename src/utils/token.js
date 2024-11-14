@@ -1,5 +1,5 @@
+import { STORAGE } from "@/constant/storage";
 import Cookies from "js-cookie";
-import { STORAGE } from "./constant/storage";
 
 // local Storage
 const localToken = {
