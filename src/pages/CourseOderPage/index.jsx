@@ -1,17 +1,18 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import InforOder from "@/components/InforOder";
-import FormOder from "@/components/FormOder";
-import PaymentOder from "@/components/PaymentOder";
-import { useNavigate, useParams } from "react-router-dom";
+import Button from "@/components/Button";
+
+import FormOder from "./components/FormOder";
+import InforOder from "./components/InforOder";
+import PaymentOder from "./components/PaymentOder";
+
+import PATH from "@/constant/pathjs";
+import { ROLE } from "@/constant/roles";
+import { useAuthContext } from "@/context/AuthContext";
 import useMutation from "@/hooks/useMutation";
 import { CourseServices } from "@/services/CourseServices";
-import { ROLE } from "@/constant/roles";
-import { formatCurrency } from "@/utils/format";
-import REGEX from "@/constant/regexjs";
-import { useAuthContext } from "@/context/AuthContext";
-import Button from "@/components/Button";
 import { OrderServices } from "@/services/OrderServices";
-import PATH from "@/constant/pathjs";
+import { formatCurrency } from "@/utils/format";
+import { useCallback, useEffect, useRef } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
 const CourseOderPage = () => {
     const { messageApi, handleGetMyPayment, handleGetMyCourses } = useAuthContext();

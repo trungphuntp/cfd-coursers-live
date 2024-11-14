@@ -5,17 +5,20 @@ import useQuery from "@/hooks/useQuery";
 import { CourseServices } from "@/services/CourseServices";
 import { QuestionServices } from "@/services/QuestionServices";
 import { formatCurrency, formatDate } from "@/utils/format";
-import React, { useEffect, useMemo } from "react";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
-import HeroSection from "@/components/HeroSection";
-import ContentDetailSection from "@/components/ContentDetailSection";
-import FeaturedSection from "@/components/FeaturedSection";
-import FaqSection from "@/components/FaqSection";
-import CoursesSection from "@/components/CoursesSection";
-import useDebounce from "@/hooks/useDebounce";
+import { useEffect, useMemo } from "react";
+import { Navigate, useParams } from "react-router-dom";
+
+import ContentDetailSection from "./components/ContentDetailSection";
+import CoursesSection from "./components/CoursesSection";
+import FaqSection from "./components/FaqSection";
+import FeaturedSection from "./components/FeaturedSection";
+import HeadTop from "./components/HeadTop";
+import HeroSection from "./components/HeroSection";
+
 import PageLoading from "@/components/PageLoading";
+import useDebounce from "@/hooks/useDebounce";
 import "./styles.scss";
-import HeadTop from "@/components/HeadTop";
+
 const CourseDetailPage = () => {
     const params = useParams();
     const { courseSlug } = params;

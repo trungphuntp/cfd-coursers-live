@@ -1,7 +1,7 @@
 import React from "react";
-import ContactHeader from "@/components/ContactHeader";
-import ContactForm from "@/components/ContactForm";
-import ContactSidebar from "@/components/ContactSidebar";
+import ContactHeader from "./components/ContactHeader";
+import ContactSidebar from "./components/ContactSidebar";
+import ContactForm from "./components/ContactForm";
 
 const handleSubmitForm = (dataForm) => {
     console.log("dataForm", dataForm);

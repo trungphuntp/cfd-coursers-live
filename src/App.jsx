@@ -23,27 +23,29 @@ import PATH from "@/constant/pathjs";
 // import PrivacyPage from "@/pages/PrivacyPage";
 // import PageNotFound from "@/pages/PageNotFound";
 
-const PageLoading = lazy(() => import("./components/PageLoading"));
-const MainLayout = lazy(() => import("./layouts/MainLayout"));
+const PageLoading = lazy(() => import("@/components/PageLoading"));
+const MainLayout = lazy(() => import("@/layouts/MainLayout"));
 
-const AboutPage = lazy(() => import("./pages/AboutPage"));
+const AboutPage = lazy(() => import("@/pages/AboutPage"));
 
-const BlogDetailPage = lazy(() => import("./pages/BlogDetailPage"));
-const BlogPage = lazy(() => import("./pages/BlogPage"));
-const ChangePasswordPage = lazy(() => import("./pages/ChangePasswordPage"));
-const ContactPage = lazy(() => import("./pages/ContactPage"));
-const CourseDetailPage = lazy(() => import("./pages/CourseDetailPage"));
-const CourseOderPage = lazy(() => import("./pages/CourseOderPage"));
-const CoursePage = lazy(() => import("./pages/CoursePage"));
-const HomePage = lazy(() => import("./pages/HomePage"));
-const PageNotFound = lazy(() => import("./pages/PageNotFound"));
-const PaymentMethodPage = lazy(() => import("./pages/PaymentMethodPage"));
-const PrivacyPage = lazy(() => import("./pages/PrivacyPage"));
-const StudentProfilePage = lazy(() => import("./pages/StudentProfilePage"));
-const MyInfo = lazy(() => import("./pages/StudentProfilePage/MyInfo"));
-const MyCourses = lazy(() => import("./pages/StudentProfilePage/MyCourses"));
-const MyMethod = lazy(() => import("./pages/StudentProfilePage/MyMethod"));
-const PrivateRoute = lazy(() => import("./components/PrivateRoute"));
+const BlogDetailPage = lazy(() => import("@/pages/BlogDetailPage"));
+const BlogPage = lazy(() => import("@/pages/BlogPage"));
+const ChangePasswordPage = lazy(() => import("@/pages/ChangePasswordPage"));
+const ContactPage = lazy(() => import("@/pages/ContactPage"));
+const CourseDetailPage = lazy(() => import("@/pages/CourseDetailPage"));
+const CourseOderPage = lazy(() => import("@/pages/CourseOderPage"));
+const CoursePage = lazy(() => import("@/pages/CoursePage"));
+const HomePage = lazy(() => import("@/pages/HomePage"));
+const PageNotFound = lazy(() => import("@/pages/PageNotFound"));
+const PaymentMethodPage = lazy(() => import("@/pages/PaymentMethodPage"));
+const PrivacyPage = lazy(() => import("@/pages/PrivacyPage"));
+const StudentProfilePage = lazy(() => import("@/pages/StudentProfilePage"));
+
+const MyInfo = lazy(() => import("@/pages/StudentProfilePage/components/MyInfo"));
+const MyCourses = lazy(() => import("@/pages/StudentProfilePage/components/MyCourses"));
+const MyMethod = lazy(() => import("@/pages/StudentProfilePage/components/MyMethod"));
+
+const PrivateRoute = lazy(() => import("@/components/PrivateRoute"));
 // const ReduxPage = lazy(() => import("@/pages/TestReduxPage"));
 
 function App() {
