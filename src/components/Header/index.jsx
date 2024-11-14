@@ -1,7 +1,7 @@
 import React from "react";
-import HeaderHumburger from "./Components/HeaderHumburger";
-import HeaderLogo from "./Components/HeaderLogo";
-import HeaderLog from "./Components/HeaderLog";
+import HeaderHumburger from "./components/HeaderHumburger";
+import HeaderLogo from "./components/HeaderLogo";
+import HeaderLog from "./components/HeaderLog";
 
 const Header = () => {
     return (
