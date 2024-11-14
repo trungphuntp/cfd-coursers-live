@@ -1,7 +1,7 @@
 import { MODAL_TYPE } from "@/constant/general";
 import { useAuthContext } from "@/context/AuthContext";
-import AuthLogin from "./components/AuthLogin";
-import AuthRegister from "./components/AuthRegister";
+import AuthLogin from "@/components/AuthLogin";
+import AuthRegister from "@/components/AuthRegister";
 import ReactDOM from "react-dom";
 const AuthModal = () => {
     const { typeLogger, _handleCloseModal } = useAuthContext();

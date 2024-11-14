@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import PATH from "./constant/pathjs";
+import PATH from "@/constant/pathjs";
 
 // import PageLoading from "@/components/PageLoading";
 // import MainLayout from "@/layouts/MainLayout";

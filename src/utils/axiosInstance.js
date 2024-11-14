@@ -1,6 +1,6 @@
 import { BASE_URL } from "@/constant/enviroments";
 import axios from "axios";
-import methodToken from "./token";
+import methodToken from "@/token";
 
 const axiosInstance = axios.create({
     baseURL: BASE_URL,
@@ -27,7 +27,11 @@ axiosInstance.interceptors.response.use(
         orginalResquest._refresh = true;
 
         // catch error 401 and 403
-        if (error.response?.status === 401 || error.response?.status === 403 || (error.response?.status === 404 && !orginalResquest._refresh)) {
+        if (
+            error.response?.status === 401 ||
+            error.response?.status === 403 ||
+            (error.response?.status === 404 && !orginalResquest._refresh)
+        ) {
             // accessToken is expired
             // refreshToken
             try {

@@ -1,6 +1,6 @@
-import DogReducer from "./reducers/DogReducers";
+import DogReducer from "@/reducers/DogReducers";
 import { createStore, combineReducers, compose, applyMiddleware } from "redux";
-import CounterReducer from "./reducers/CounterReducer";
+import CounterReducer from "@/reducers/CounterReducer";
 
 const reducers = combineReducers({
     DogReducer,

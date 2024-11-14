@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import InforOder from "./components/InforOder";
-import FormOder from "./components/FormOder";
-import PaymentOder from "./components/PaymentOder";
+import InforOder from "@/components/InforOder";
+import FormOder from "@/components/FormOder";
+import PaymentOder from "@/components/PaymentOder";
 import { useNavigate, useParams } from "react-router-dom";
 import useMutation from "@/hooks/useMutation";
 import { CourseServices } from "@/services/CourseServices";
@@ -47,7 +47,9 @@ const CourseOderPage = () => {
     const refOrderMethodPayment = useRef();
 
     // ========= END  ===========
-    const { loading: loadingOder, execute: executeOder } = useMutation(OrderServices.postOrderCourses);
+    const { loading: loadingOder, execute: executeOder } = useMutation(
+        OrderServices.postOrderCourses
+    );
 
     const _onOrder = useCallback(() => {
         const profileData = refOrderForm?.current?.onSubmitForm();
@@ -111,7 +113,11 @@ const CourseOderPage = () => {
             <section className="sccourseorder">
                 <div className="container small">
                     <InforOder {...CoursesInforProps} />
-                    <FormOder {...CoursesInforProps} disabled={isAlreadyCourse} ref={refOrderForm} />
+                    <FormOder
+                        {...CoursesInforProps}
+                        disabled={isAlreadyCourse}
+                        ref={refOrderForm}
+                    />
                     <PaymentOder ref={refOrderMethodPayment} disabled={isAlreadyCourse} />
                     {/* addclass --processing khi bấm đăng ký */}
                     <Button onClick={_onOrder} disabled={isAlreadyCourse} style={{ width: "100%" }}>

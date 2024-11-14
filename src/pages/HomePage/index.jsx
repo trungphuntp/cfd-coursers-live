@@ -1,14 +1,14 @@
 import useQuery from "@/hooks/useQuery";
 import { CourseServices } from "@/services/CourseServices";
-import CallRegisterSection from "./components/CallRegisterSection";
-import CourseComingSection from "./components/CourseComingSection";
-import FaqSection from "./components/FaqSection";
-import FeaturedSection from "./components/FeaturedSection";
-import GallerySection from "./components/GallerySection";
-import HeroSection from "./components/HeroSection";
-import TeacherSection from "./components/TeacherSection";
-import TestimonialSection from "./components/TestimonialSection";
-import CoursesSection from "./components/CoursesSection";
+import CallRegisterSection from "@/components/CallRegisterSection";
+import CourseComingSection from "@/components/CourseComingSection";
+import FaqSection from "@/components/FaqSection";
+import FeaturedSection from "@/components/FeaturedSection";
+import GallerySection from "@/components/GallerySection";
+import HeroSection from "@/components/HeroSection";
+import TeacherSection from "@/components/TeacherSection";
+import TestimonialSection from "@/components/TestimonialSection";
+import CoursesSection from "@/components/CoursesSection";
 import { TeamServices } from "@/services/TeamServices";
 import { QuestionServices } from "@/services/QuestionServices";
 import useDebounce from "@/hooks/useDebounce";
@@ -16,7 +16,11 @@ import PageLoading from "@/components/PageLoading";
 
 const HomePage = () => {
     // courses
-    const { data: dataCourses, error: errorCourses, loading: loadingCourses } = useQuery(CourseServices.getCourses);
+    const {
+        data: dataCourses,
+        error: errorCourses,
+        loading: loadingCourses,
+    } = useQuery(CourseServices.getCourses);
     const courses = dataCourses?.courses;
     const comingCourses =
         courses?.filter((course) => {
@@ -25,7 +29,11 @@ const HomePage = () => {
         }) || [];
 
     // teacher Team
-    const { data: dataTeam, error: errorTeam, loading: loadingTeam } = useQuery(TeamServices.getTeam);
+    const {
+        data: dataTeam,
+        error: errorTeam,
+        loading: loadingTeam,
+    } = useQuery(TeamServices.getTeam);
     const teacherTeam = dataTeam?.teams || [];
 
     // question
