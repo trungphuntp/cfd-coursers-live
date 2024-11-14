@@ -1,0 +1,13 @@
+.accordion__content {
+    &:first-child {
+        .accordion__content-text {
+            display: none;
+        }
+
+        &.active {
+            .accordion__content-text {
+                display: block;
+            }
+        }
+    }
+}
