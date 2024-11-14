@@ -1,6 +1,4 @@
-import { Flex, Spin } from "antd";
-import { Content } from "antd/es/layout/layout";
-import React from "react";
+import { Spin } from "antd";
 import styled from "styled-components";
 
 const Loading = styled.div`

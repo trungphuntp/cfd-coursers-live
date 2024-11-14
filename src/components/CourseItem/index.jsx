@@ -53,7 +53,10 @@ const CourseItem = ({ image, slug, name, teams, startDate, tags, type, price }) 
                         )}
                     </div>
                     <div className="btnwrap">
-                        <Button link={`${PATH.COURSE.ORDER_PATH}/${slug}`} className="btn btn--primary">
+                        <Button
+                            link={`${PATH.COURSE.ORDER_PATH}/${slug}`}
+                            className="btn btn--primary"
+                        >
                             Đăng Ký Học
                         </Button>
                         <Button link={detailPath} className="btn btn--border --black">
@@ -69,7 +72,9 @@ const CourseItem = ({ image, slug, name, teams, startDate, tags, type, price }) 
             <div className="img">
                 <Link to={detailPath}>
                     <img src={image || ""} alt="Khóa học CFD" className="course__thumbnail" />
-                    {tags?.length > 0 && <span className="course__img-badge badge">{tags?.join(" | " || " ")}</span>}
+                    {tags?.length > 0 && (
+                        <span className="course__img-badge badge">{tags?.join(" | " || " ")}</span>
+                    )}
                 </Link>
             </div>
             <div className="content">
