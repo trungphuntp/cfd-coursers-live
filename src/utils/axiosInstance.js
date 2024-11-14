@@ -1,6 +1,6 @@
-import { BASE_URL } from "@/constant/enviroments";
+import { BASE_URL } from "./constant/enviroments";
 import axios from "axios";
-import methodToken from "@/token";
+import methodToken from "./token";
 
 const axiosInstance = axios.create({
     baseURL: BASE_URL,

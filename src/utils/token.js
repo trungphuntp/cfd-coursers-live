@@ -1,11 +1,14 @@
-import { STORAGE } from "@/constant/storage";
 import Cookies from "js-cookie";
-import { json } from "react-router-dom";
+import { STORAGE } from "./constant/storage";
 
 // local Storage
 const localToken = {
     get() {
-        return JSON.parse(localStorage.getItem(STORAGE.token) === undefined ? null : localStorage.getItem(STORAGE.token));
+        return JSON.parse(
+            localStorage.getItem(STORAGE.token) === undefined
+                ? null
+                : localStorage.getItem(STORAGE.token)
+        );
     },
     set(token) {
         return localStorage.setItem(STORAGE.token, JSON.stringify(token));
@@ -18,7 +21,9 @@ const localToken = {
 // Cookies
 const cookieToken = {
     get() {
-        return JSON.parse(Cookies.get(STORAGE.token) === undefined ? null : Cookies.get(STORAGE.token));
+        return JSON.parse(
+            Cookies.get(STORAGE.token) === undefined ? null : Cookies.get(STORAGE.token)
+        );
     },
     set(token) {
         return Cookies.set(STORAGE.token, JSON.stringify(token));

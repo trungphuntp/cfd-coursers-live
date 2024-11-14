@@ -1,5 +1,4 @@
-import axiosInstance from "@/utils/axiosInstance";
-import methodToken from "@/utils/token";
+import axiosInstance from "./utils/axiosInstance";
 
 export const AuthServices = {
     login(payload = {}) {
