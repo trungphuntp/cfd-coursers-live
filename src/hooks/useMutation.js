@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const useMutation = (promise) => {
-    const [data, setData] = useState();
+    const [data, setData] = useState([]);
     const [error, setError] = useState();
     const [loading, setLoading] = useState(false);
 
@@ -13,6 +13,7 @@ const useMutation = (promise) => {
             setData(res.data?.data || []);
             onSuccess?.(res.data?.data);
         } catch (error) {
+            setData([]);
             setError(error);
             onFail?.(error);
         } finally {

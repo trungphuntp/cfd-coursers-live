@@ -6,7 +6,11 @@ import { Empty, Skeleton } from "antd";
 import React from "react";
 
 const CoursePage = () => {
-    const { data: dataCourses, error: errorCourses, loading: loadingCourses } = useQuery(CourseServices.getCourses);
+    const {
+        data: dataCourses,
+        error: errorCourses,
+        loading: loadingCourses,
+    } = useQuery(CourseServices.getCourses);
     const courses = dataCourses?.courses || [];
 
     const loadingPage = useDebounce(loadingCourses, 300);
