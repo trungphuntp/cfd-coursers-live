@@ -21,7 +21,7 @@ const BlogDetailPage = () => {
         executeBlogDetail(`/${blogSlug}`);
     }, [blogSlug]);
 
-    // console.log(dataBlogDetail);
+    // // console.log(dataBlogDetail);
 
     //============== PROPS BLOG DETAIL TITLE ==============
     const propsTitle = useMemo(() => {
@@ -62,7 +62,7 @@ const BlogDetailPage = () => {
         });
         return blogsByCategory;
     };
-    console.log(_blogRelated());
+    // console.log(_blogRelated());
 
     //============== LOADING ==============
     const loadingApi = loadingBlog || loadingBlogDetail;

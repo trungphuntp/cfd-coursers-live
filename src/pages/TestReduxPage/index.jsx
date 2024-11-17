@@ -17,7 +17,7 @@ const ReduxPage = () => {
     const counter = useSelector((state) => state?.CounterReducer);
     const dog = useSelector((state) => state?.DogReducer);
     const dispatch = useDispatch();
-    console.log(dog);
+    // console.log(dog);
 
     useEffect(() => {
         dispatch(fetchDog());

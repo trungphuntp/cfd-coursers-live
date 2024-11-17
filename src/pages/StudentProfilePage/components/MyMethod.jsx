@@ -26,7 +26,7 @@ const MyMethod = () => {
                 <Empty description="Không có khoản thanh toán nào" />
             ) : (
                 myPayment?.map((item, index) => {
-                    console.log(item);
+                    // console.log(item);
                     const { course, paymentMethod, updatedAt } = item;
                     return (
                         <div className="itemhistory" key={item?.id || new Date().getTime + index}>

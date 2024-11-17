@@ -53,11 +53,11 @@ const AuthRegister = () => {
 
         setError(objectError);
         if (Object.keys(objectError).length > 0) {
-            console.log("submit error", objectError);
+            // console.log("submit error", objectError);
             firstInputRef.current.focus();
         } else {
             setLoading(true);
-            console.log("submit success", form);
+            // console.log("submit success", form);
 
             handleRegister(form, () => {
                 setTimeout(() => {
@@ -84,7 +84,10 @@ const AuthRegister = () => {
         }
     }, [firstInputRef]);
     return (
-        <div className={`modal__wrapper-content mdregister active`} style={{ position: "relative" }}>
+        <div
+            className={`modal__wrapper-content mdregister active`}
+            style={{ position: "relative" }}
+        >
             {loading && <ComponentLoading />}
             <div className="form__bottom">
                 <p>Bạn đã có tài khoản?</p>
@@ -123,7 +126,13 @@ const AuthRegister = () => {
                     {...register("name")}
                 />
                 <Input label={"Email"} placeholder="Email" isRequire {...register("email")} />
-                <Input type="password" label={"Password"} placeholder="Password" isRequire {...register("password")} />
+                <Input
+                    type="password"
+                    label={"Password"}
+                    placeholder="Password"
+                    isRequire
+                    {...register("password")}
+                />
                 <Input
                     type="password"
                     label={"Confirm Password"}

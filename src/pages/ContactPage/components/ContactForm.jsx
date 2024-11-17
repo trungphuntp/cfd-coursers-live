@@ -65,10 +65,10 @@ const ContactForm = ({ handleSubmitForm }) => {
 
         // kiểm tra lỗi khi submit
         if (Object.keys(errorObject).length > 0) {
-            console.log("submit error", errorObject);
+            // console.log("submit error", errorObject);
             firstInputRef.current.focus();
         } else {
-            console.log("submit success", form);
+            // console.log("submit success", form);
             handleSubmitForm?.(form);
             _resetForm();
             navigate("/");
@@ -95,7 +95,13 @@ const ContactForm = ({ handleSubmitForm }) => {
     return (
         <div className="form">
             <h3 className="title --t3">Gửi yêu cầu hỗ trợ</h3>
-            <Input ref={firstInputRef} label={"Họ và tên"} isRequire placeholder="Họ và tên" {...register("name")} />
+            <Input
+                ref={firstInputRef}
+                label={"Họ và tên"}
+                isRequire
+                placeholder="Họ và tên"
+                {...register("name")}
+            />
             <Input label={"Email"} isRequire placeholder="Email" {...register("email")} />
             <Input label={"Phone"} isRequire placeholder="Phone" {...register("phone")} />
 

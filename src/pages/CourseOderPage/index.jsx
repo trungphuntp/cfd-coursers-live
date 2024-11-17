@@ -67,7 +67,7 @@ const CourseOderPage = () => {
                 paymentMethod: refOrderMethodPayment.current.selectPaymentMedthod,
             };
 
-            console.log("payload", payload);
+            // console.log("payload", payload);
             // CALL API
             executeOder?.(payload, {
                 onSuccess: async () => {

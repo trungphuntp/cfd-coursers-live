@@ -18,7 +18,8 @@ const MyInfo = () => {
         email: "",
     });
 
-    const { firstName, email, profileImage, phone, facebookURL, introduce, website } = profile || {};
+    const { firstName, email, profileImage, phone, facebookURL, introduce, website } =
+        profile || {};
 
     const [form, setForm] = useState(initialForm?.current);
 
@@ -87,7 +88,7 @@ const MyInfo = () => {
 
         // kiểm tra lỗi khi submit
         if (Object.keys(errorObject).length > 0) {
-            console.log("submit error", errorObject);
+            // console.log("submit error", errorObject);
         } else {
             handleUpdateProfile?.(form);
         }
@@ -116,15 +117,35 @@ const MyInfo = () => {
         <div className="tab__content-item" style={{ display: "block" }}>
             <div className="form">
                 <div className="form-container">
-                    <Input label={"Họ và tên"} isRequire {...register("firstName")} placeholder={"Họ và tên"} />
+                    <Input
+                        label={"Họ và tên"}
+                        isRequire
+                        {...register("firstName")}
+                        placeholder={"Họ và tên"}
+                    />
 
-                    <Input label={"Số điện thoại"} isRequire {...register("phone")} placeholder={"Số điện thoại"} />
+                    <Input
+                        label={"Số điện thoại"}
+                        isRequire
+                        {...register("phone")}
+                        placeholder={"Số điện thoại"}
+                    />
                 </div>
                 <div className="form-container">
                     <Input label={"Email"} disabled isRequire {...register("email")} />
-                    <Input label={"Mật khẩu"} disabled isRequire value={"12345568900"} type={"password"} />
+                    <Input
+                        label={"Mật khẩu"}
+                        disabled
+                        isRequire
+                        value={"12345568900"}
+                        type={"password"}
+                    />
                 </div>
-                <Input label={"Facebook UR"} {...register("facebookURL")} placeholder={"Facebook UR"} />
+                <Input
+                    label={"Facebook UR"}
+                    {...register("facebookURL")}
+                    placeholder={"Facebook UR"}
+                />
                 <Input label={"Website"} {...register("website")} placeholder={"Website"} />
                 <Input
                     label={"Giới thiệu bản thân"}

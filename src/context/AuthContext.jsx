@@ -37,7 +37,7 @@ export const AuthContextProvider = ({ children }) => {
     };
 
     const handleLogin = async (loginData, callBack) => {
-        console.log(loginData);
+        // console.log(loginData);
 
         try {
             // xử lí payload đúng định dạng
@@ -57,7 +57,7 @@ export const AuthContextProvider = ({ children }) => {
                 messageApi.error("Đăng nhập thất bại!");
             }
         } catch (error) {
-            console.log("error", error);
+            // console.log("error", error);
             messageApi.error("Đăng nhập thất bại!");
         } finally {
             callBack?.();
@@ -88,7 +88,7 @@ export const AuthContextProvider = ({ children }) => {
                 messageApi.error("Đăng nhập thất bại!");
             }
         } catch (error) {
-            console.log("error", error);
+            // console.log("error", error);
             messageApi.error("Đăng nhập thất bại!");
         } finally {
             callBack?.();
@@ -108,7 +108,7 @@ export const AuthContextProvider = ({ children }) => {
                 setProfile(res.data.data);
             }
         } catch (error) {
-            console.log("error", error);
+            // console.log("error", error);
 
             handleLogout();
         }
@@ -123,7 +123,7 @@ export const AuthContextProvider = ({ children }) => {
                 setMyCourses(res.data.data.orders);
             }
         } catch (error) {
-            console.log("error", error);
+            // console.log("error", error);
         }
     };
 
@@ -137,7 +137,7 @@ export const AuthContextProvider = ({ children }) => {
                 setMyPayment(res.data.data.orders);
             }
         } catch (error) {
-            console.log("error", error);
+            // console.log("error", error);
         }
     };
 
@@ -160,7 +160,7 @@ export const AuthContextProvider = ({ children }) => {
                 messageApi.success("Cập nhật thành công!");
             }
         } catch (error) {
-            console.log("error", error);
+            // console.log("error", error);
             messageApi.error("Cập nhật thất bại!");
         }
     };

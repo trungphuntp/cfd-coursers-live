@@ -41,11 +41,11 @@ const AuthLogin = ({ handleSubmitForm }) => {
 
         // kiểm tra lỗi khi submit
         if (Object.keys(errorObject).length > 0) {
-            console.log("submit error", errorObject);
+            // console.log("submit error", errorObject);
             firstInputRef.current.focus();
         } else {
             setLoading(true);
-            console.log("submit success", form);
+            // console.log("submit success", form);
             handleSubmitForm?.(form);
 
             handleLogin?.(form, () => {
@@ -105,8 +105,18 @@ const AuthLogin = ({ handleSubmitForm }) => {
             </div> */}
             <span className="line">Hoặc</span>
             <form onSubmit={_onSubmitLogin} className="form">
-                <Input ref={firstInputRef} label={"Email"} placeholder="Email" {...register("email")} />
-                <Input label={"Password"} placeholder="Password" type="password" {...register("password")} />
+                <Input
+                    ref={firstInputRef}
+                    label={"Email"}
+                    placeholder="Email"
+                    {...register("email")}
+                />
+                <Input
+                    label={"Password"}
+                    placeholder="Password"
+                    type="password"
+                    {...register("password")}
+                />
 
                 {/* <div className="form__bottom">
                     <a className="color--primary" href="#">

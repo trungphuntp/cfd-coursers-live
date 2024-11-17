@@ -74,10 +74,10 @@ const FormOder = ({ tags, disabled }, ref) => {
 
         // kiểm tra lỗi khi submit
         if (Object.keys(errorObject).length > 0) {
-            console.log("submit error", errorObject);
+            // console.log("submit error", errorObject);
             return null;
         } else {
-            console.log("submit success", form);
+            // console.log("submit success", form);
             return form;
         }
     };
@@ -119,11 +119,21 @@ const FormOder = ({ tags, disabled }, ref) => {
             <div className="boxorder">
                 <div className="form">
                     <div className="form-container">
-                        <Input label={"Họ và tên"} isRequire {...register("name")} disabled={disabled} />
+                        <Input
+                            label={"Họ và tên"}
+                            isRequire
+                            {...register("name")}
+                            disabled={disabled}
+                        />
                         <Input label={"Email"} disabled isRequire {...register("email")} />
                     </div>
                     <div className="form-container">
-                        <Input label={"Số điện thoại"} isRequire {...register("phone")} disabled={disabled} />
+                        <Input
+                            label={"Số điện thoại"}
+                            isRequire
+                            {...register("phone")}
+                            disabled={disabled}
+                        />
 
                         <Input
                             label={"Hình thức học"}

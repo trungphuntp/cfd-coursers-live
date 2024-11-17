@@ -4,7 +4,7 @@ import ContactSidebar from "./components/ContactSidebar";
 import ContactForm from "./components/ContactForm";
 
 const handleSubmitForm = (dataForm) => {
-    console.log("dataForm", dataForm);
+    // console.log("dataForm", dataForm);
 };
 
 const ContactPage = () => {
