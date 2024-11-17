@@ -31,7 +31,7 @@ const BlogPage = () => {
     }, [query]);
 
     const loadingApi = loadingCategories || loadingBlogs;
-    const loadingPage = useDebounce(loadingApi, 500);
+    const loadingPage = useDebounce(loadingApi, 300);
 
     return (
         <main className="mainwrapper blog --ptop">
@@ -47,39 +47,6 @@ const BlogPage = () => {
                     selectCategories={selectCategories}
                 />
                 <BlogList dataBlogs={blogs} loading={loadingPage} />
-
-                {!loadingPage && (
-                    <ul className="paging">
-                        <li>
-                            <a href="#">
-                                <i>
-                                    <img src="img/iconprev.svg" alt />
-                                </i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" className="active">
-                                1
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">2</a>
-                        </li>
-                        <li>
-                            <a href="#">3</a>
-                        </li>
-                        <li>
-                            <a href="#">4</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i>
-                                    <img src="img/iconprev.svg" alt />
-                                </i>
-                            </a>
-                        </li>
-                    </ul>
-                )}
             </div>
         </main>
     );
