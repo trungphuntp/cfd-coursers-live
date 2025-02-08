@@ -275,9 +275,10 @@ const AboutPage = () => {
                             alt="CFD Circle"
                         />
                         <img
-                            src="https://cfdcircle.vn/files/about/Team/dsc6977.jpg"
+                            src="https://cfdcircle.vn/files/about/Team/image02-(1).jpg"
                             alt="CFD Circle"
                         />
+
                         <img
                             src="https://cfdcircle.vn/files/about/Team/dsc7008-1.jpg"
                             alt="CFD Circle"
@@ -291,19 +292,19 @@ const AboutPage = () => {
                             alt="CFD Circle"
                         />
                         <img
-                            src="https://cfdcircle.vn/files/about/Team/beauty-1618471376803-2.jpg"
+                            src="https://cfdcircle.vn/files/about/Team/dsc6977.jpg"
                             alt="CFD Circle"
                         />
                         <img
-                            src="https://cfdcircle.vn/files/about/Team/beauty-1618547659094-2.jpg"
+                            src="https://cfdcircle.vn/files/about/Team/dsc6977.jpg"
                             alt="CFD Circle"
                         />
                         <img
-                            src="https://cfdcircle.vn/files/about/Team/beauty-1618593111409.jpg"
+                            src="https://cfdcircle.vn/files/about/Team/cfd-team-87.jpg"
                             alt="CFD Circle"
                         />
                         <img
-                            src="https://cfdcircle.vn/files/about/Team/beauty-1618593213120.jpg"
+                            src="https://cfdcircle.vn/files/about/Team/image02-(1).jpg"
                             alt="CFD Circle"
                         />
                         <img

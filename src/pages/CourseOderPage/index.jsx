@@ -28,7 +28,7 @@ const CourseOderPage = () => {
     } = useMutation(CourseServices.getCourseBySlug);
 
     useEffect(() => {
-        if (courseSlug) {
+        if (!!courseSlug) {
             getCourseData(`/${courseSlug}`);
         }
     }, [courseSlug]);
@@ -67,6 +67,7 @@ const CourseOderPage = () => {
                 type: typeForm,
                 paymentMethod: refOrderMethodPayment.current.selectPaymentMedthod,
             };
+            console.log(payload);
 
             // console.log("payload", payload);
             // CALL API
@@ -84,7 +85,7 @@ const CourseOderPage = () => {
         } else {
             messageApi.error("Vui lòng chọn phương thức thanh toán!");
         }
-    }, [refOrderMethodPayment, refOrderForm]);
+    }, [refOrderMethodPayment, refOrderForm, CourseData]);
 
     // ========= Already Coursers ===========
 
