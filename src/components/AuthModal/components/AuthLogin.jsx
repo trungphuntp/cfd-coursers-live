@@ -51,7 +51,7 @@ const AuthLogin = ({ handleSubmitForm }) => {
             handleLogin?.(form, () => {
                 setTimeout(() => {
                     setLoading(false);
-                }, 1000);
+                }, 500);
             });
         }
     };

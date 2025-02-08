@@ -19,16 +19,17 @@ const CourseOderPage = () => {
     const navigate = useNavigate();
     // ========= CALL API BY SLUG ===========
     const { courseSlug } = useParams();
+
     const {
         data: CourseData,
         error: CourseError,
         loading: CourseLoading,
-        execute,
+        execute: getCourseData,
     } = useMutation(CourseServices.getCourseBySlug);
 
     useEffect(() => {
         if (courseSlug) {
-            execute(`/${courseSlug}` || {}, {});
+            getCourseData(`/${courseSlug}`);
         }
     }, [courseSlug]);
 

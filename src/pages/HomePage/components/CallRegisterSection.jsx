@@ -1,4 +1,6 @@
+import PATH from "@/constant/pathjs";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CallRegisterSection = () => {
     return (
@@ -9,15 +11,16 @@ const CallRegisterSection = () => {
                         <span className="color--primary">trở thành một phần</span> của CFD Circle
                     </h3>
                     <p>
-                        Chúng tôi rất vui khi bạn quyết định trở thành một phần của CFD Circle để cùng nhau học hỏi, lan toả và chia sẻ những kinh
-                        nghiệm quý giá cho cộng đồng.
+                        Chúng tôi rất vui khi bạn quyết định trở thành một phần của CFD Circle để
+                        cùng nhau học hỏi, lan toả và chia sẻ những kinh nghiệm quý giá cho cộng
+                        đồng.
                     </p>
-                    <a href="courses.html" className="btn btn--primary">
+                    <Link to={PATH.PROFILE.COURSE} className="btn btn--primary">
                         Tham gia Khoá học
-                    </a>
-                    <a href="contact.html" className="btn btn--border --black">
+                    </Link>
+                    <Link to={PATH.CONTACT} className="btn btn--border --black">
                         Liên hệ tư vấn
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

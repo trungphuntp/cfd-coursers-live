@@ -57,7 +57,10 @@ export const AuthContextProvider = ({ children }) => {
                 messageApi.error("Đăng nhập thất bại!");
             }
         } catch (error) {
-            // console.log("error", error);
+            const errorInfor = error?.response?.data;
+            if (errorInfor?.error === "Not Found") {
+                messageApi.error("Email hoặc mật khâu không chính xác");
+            }
             messageApi.error("Đăng nhập thất bại!");
         } finally {
             callBack?.();
@@ -89,11 +92,16 @@ export const AuthContextProvider = ({ children }) => {
             }
         } catch (error) {
             // console.log("error", error);
+            const errorInfor = error?.response?.data;
+            if (errorInfor?.error === "Forbidden") {
+                messageApi.error("Email đã được đăng kí!");
+            }
             messageApi.error("Đăng nhập thất bại!");
         } finally {
             callBack?.();
         }
     };
+
     const handleLogout = () => {
         methodToken.remove();
         navigate(PATH.HOME);

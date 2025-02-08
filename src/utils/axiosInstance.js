@@ -19,7 +19,6 @@ axiosInstance.interceptors.request.use(
 axiosInstance.interceptors.response.use(
     (response) => {
         // Status code 200 - 299 (success)
-
         return response;
     },
     async (error) => {
@@ -54,7 +53,7 @@ axiosInstance.interceptors.response.use(
 
                 return axiosInstance(orginalResquest);
             } catch (error) {
-                // falil refresh token or expired the refresh token
+                // fail refresh token or expired the refresh token
                 methodToken.remove();
             }
         }

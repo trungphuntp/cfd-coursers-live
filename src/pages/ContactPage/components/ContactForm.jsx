@@ -3,6 +3,7 @@ import Input from "@/components/Input";
 import Select from "@/components/Select";
 import Textarea from "@/components/Textarea";
 import REGEX from "@/constant/regexjs";
+import { message } from "antd";
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -70,6 +71,7 @@ const ContactForm = ({ handleSubmitForm }) => {
         } else {
             // console.log("submit success", form);
             handleSubmitForm?.(form);
+            message.success("Gửi thành công!");
             _resetForm();
             navigate("/");
         }

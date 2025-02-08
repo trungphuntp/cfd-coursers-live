@@ -52,7 +52,10 @@ const HeaderLog = () => {
                         onClick={_showDropdown}
                     >
                         <div className="userlogged__avatar-img user__img">
-                            <img src={profileImage || "/img/avatar_nghia.jpg"} alt="Avatar teacher" />
+                            <img
+                                src={profileImage || "/img/default-avatar.jpg"}
+                                alt="Avatar teacher"
+                            />
                         </div>
                         <i className="userlogged__avatar-icon">
                             <svg
@@ -66,10 +69,15 @@ const HeaderLog = () => {
                             </svg>
                         </i>
                     </div>
-                    <div className={`userlogged__dropdown dropdown ${showDropdown ? "active" : ""}`}>
+                    <div
+                        className={`userlogged__dropdown dropdown ${showDropdown ? "active" : ""}`}
+                    >
                         <div className="userlogged__dropdown-info">
                             <div className="user__img">
-                                <img src={profileImage || "/img/avatar_nghia.jpg"} alt="Avatar teacher" />
+                                <img
+                                    src={profileImage || "/img/default-avatar.jpg"}
+                                    alt="Avatar teacher"
+                                />
                             </div>
                             <Link to={PATH.PROFILE.PATH} className="user__info">
                                 <p className="title --t4">
@@ -80,12 +88,12 @@ const HeaderLog = () => {
                         </div>
                         <div className="userlogged__dropdown-list">
                             <Link to={PATH.PROFILE.COURSE}>Khóa học của tôi</Link>
-                            <Link to={PATH.PROFILE.PAYMENT}>Lịch sử thanh toán</Link>
+                            <Link to={PATH.PROFILE.METHOD}>Lịch sử thanh toán</Link>
                             <Link to={PATH.CONTACT}>Hỗ trợ</Link>
                             <a href="#" onClick={_onLogoutClick}>
                                 Đăng xuất{" "}
                                 <i>
-                                    <img src="img/iconlogout.svg" alt />
+                                    <img src="/img/iconlogout.svg" alt />
                                 </i>
                             </a>
                         </div>
@@ -97,7 +105,11 @@ const HeaderLog = () => {
         return (
             <>
                 <div class="header__auth">
-                    <a href="javascript:void(0)" class="btn btn--transparent btnmodal" data-modal="mdlogin">
+                    <a
+                        href="javascript:void(0)"
+                        class="btn btn--transparent btnmodal"
+                        data-modal="mdlogin"
+                    >
                         <span onClick={_onLoginClick}>Đăng ký /&nbsp;</span>
                         <span onClick={_onRegisterClick}>Đăng nhập</span>
                     </a>
